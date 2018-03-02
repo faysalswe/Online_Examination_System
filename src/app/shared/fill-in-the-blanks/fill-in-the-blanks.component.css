@@ -1,0 +1,19 @@
+.mat-input-element {
+    text-align: center;
+    color: green; 
+}
+
+input{
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid green;
+    text-align: center;
+    width: 100px;
+}
+
+input:focus{
+    outline: none;
+    width: 150px;
+    border-bottom: 2px solid green;
+}
+

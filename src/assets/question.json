@@ -1,0 +1,62 @@
+[
+    { 
+        "questionId": 1,
+        "questionTypeId":1,
+        "examId": 1001,
+        "instruction":"Mark devided into evey blank field.",
+        "question":"Time and -- wait for --.",
+        "option1":"",
+        "option2":"",
+        "option3":"",
+        "option4":"",
+        "mark": 2
+    },
+    { 
+        "questionId": 2,
+        "questionTypeId":3,
+        "examId": 1001,
+        "instruction":"",
+        "question":"javascript can be used?",
+        "option1":"server",
+        "option2":"client",
+        "option3":"both",
+        "option4":"browser",
+        "mark": 1
+    },
+    { 
+        "questionId": 3,
+        "questionTypeId":4,
+        "examId": 1001,
+        "instruction":"",
+        "question":"those are similar language in the below list",
+        "option1":"javascript",
+        "option2":"Rust",
+        "option3":"python",
+        "option4":"es6",
+        "mark": 1
+    },
+    { 
+        "questionId": 4,
+        "questionTypeId": 2,
+        "examId": 1001,
+        "instruction":"statement true or false.",
+        "question":"in rapid development waterfall is best over the agile method.",
+        "option1":"True",
+        "option2":"False",
+        "option3":"",
+        "option4":"",
+        "mark": 1
+    },
+    { 
+        "questionId": 5,
+        "questionTypeId": 1,
+        "examId": 1001,
+        "instruction":"Mark devided into evey blank field and each mark given individual.",
+        "question":" A class should have --, and only --, reason to --.",
+        "option1":"",
+        "option2":"",
+        "option3":"",
+        "option4":"",
+        "mark": 3
+    }
+]

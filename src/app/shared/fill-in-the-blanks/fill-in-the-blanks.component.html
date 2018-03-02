@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    <div class="question-heading">
+    <div class="question-no"> <div class="qno">{{questionSerial}}</div> <div class="question-type"> Fill in the blanks</div>  </div>
+    </div>
+    <div class="following-up">
+      {{ fillInTheBlanks.instruction }}
+    </div>
+
+    <div class="question">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div formArrayName="answers">
+          <span *ngFor="let ans of answers.controls; index as i">
+            {{ questionArrary[i] }}
+            <span *ngIf="(answers.controls.length - 1) > i ">
+              <input [formControlName]="i" placeholder="{{i+1}}" (blur)="onSubmit()">
+            </span>
+          </span>
+        </div>
+      </form>
+    </div>
+
+  </mat-card-content>
+</mat-card>

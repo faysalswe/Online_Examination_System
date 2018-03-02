@@ -1,3 +1,43 @@
-<p>
-student home works!
-</p>
+<app-navigation></app-navigation>
+<br>
+<router-outlet>
+  <div class="container">
+    <div class="sidebar">
+      <app-timer></app-timer>
+      <br>
+      <app-question-graph [totalQuestion]="questions"></app-question-graph>
+    </div>
+    <div class="main-content">
+
+      <div *ngFor="let question of questions; index as i"  [ngSwitch]="question.questionTypeId">
+          <app-fill-in-the-blanks 
+          *ngSwitchCase="1"
+           [fillInTheBlanks]="question"
+           [questionSerial]="i+1">
+          </app-fill-in-the-blanks>
+
+          <app-true-false 
+          *ngSwitchCase="2"
+          [trueFalse]="question"
+          [questionSerial]="i+1">
+        </app-true-false>
+
+          <app-multiple-choice 
+          *ngSwitchCase="3"
+          [multipleChoice]="question"
+          [questionSerial]="i+1">
+        </app-multiple-choice>
+
+          <app-multiple-select 
+          *ngSwitchCase="4"
+          [multipleSelect]="question"
+          [questionSerial]="i+1">
+        </app-multiple-select>
+        
+          <br>
+      </div>
+    
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+</router-outlet>

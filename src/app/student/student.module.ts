@@ -2,12 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { StudentComponent } from './student.component';
+import { SharedImportsModule } from '../shared-imports.module';
+import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
+import { ExamHistoryComponent } from './exam-history/exam-history.component';
+import { ExamComponent} from './exam/exam.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
+import { StudentService} from './student.service';
 const routes: Routes = [
-  { path: 'student', component: StudentComponent, children: [
-    { path: 'home', component: HomeComponent }
+  { path: 'student', component: HomeComponent, children: [
+     { path: 'exam', component:  ExamComponent },
+     { path: 'profile', component: ExamHistoryComponent }
   ]}
 ];
 
@@ -15,10 +21,14 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    
+    SharedImportsModule,
+    SharedModule
   ],
   declarations: [
-    StudentComponent,
-    HomeComponent]
+    HomeComponent,
+    ExamComponent,
+    ExamHistoryComponent,
+    NavigationComponent
+  ]
 })
 export class StudentModule { }

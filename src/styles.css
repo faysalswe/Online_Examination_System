@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    padding-top: 55px;
+    background: #eee;
+    padding-bottom: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cf::after,
+.cf::before{
+    content: "";
+    display: block;
+}
+
+.cf::after{
+    clear: both;
+}
+
+.cf{
+    *zoom: 1;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1150px;
+}
+
+*{
+    font-size: 17px;
+}
+
+/* Mat Card  */
+
+.question-heading{
+    border-bottom: 2px solid rgba(160, 149, 149, 0.212);
+    margin-bottom: 5px;
+    padding-bottom: 5px; 
+}
+
+.question-type{
+    color: rgba(0,0,0,.54);
+    font-size: 14px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.following-up{
+    font-size: 15px;
+    font-family: serif;
+    color: dimgray;
+}
+
+.qno{
+    display: inline-block;
+    border: 2px solid green;
+    width: 37px;
+    height: 37.5px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.question{
+    font-size: 18px;
+    font-weight: 300px;
+}
+
+.question-no{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

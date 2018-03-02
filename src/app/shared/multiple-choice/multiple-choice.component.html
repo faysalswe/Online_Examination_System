@@ -1,0 +1,22 @@
+ <mat-card>
+  <mat-card-content>
+      <div class="question-heading">
+        <div class="question-no">
+          <div class="qno">{{ questionSerial }}</div>
+          <div class="question-type"> Multiple Choice</div>
+        </div>
+      </div>
+
+      <div class="following-up">
+        {{multipleChoice.instruction}}
+      </div>
+      <div class="question">
+      {{ multipleChoice.question }}
+      </div>
+        <mat-radio-group [(ngModel)]="answer">
+          <mat-radio-button *ngFor="let option of options" [value]="option" (click)="onClick()">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+  </mat-card-content>
+</mat-card>

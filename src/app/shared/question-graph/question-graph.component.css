@@ -1,0 +1,23 @@
+a{
+    border: 2px solid green;
+    padding-top: 2px;
+    margin: 3px;
+    border-radius: 50%;
+    min-height: 37.5px;
+    max-height: 37.5px;
+    min-width: 37px;
+    max-width: 37px;
+    text-align: center;
+}
+
+a:hover{
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+
+mat-card-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

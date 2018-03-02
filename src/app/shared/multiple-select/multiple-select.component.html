@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-content>
+        <div class="question-heading">
+            <div class="question-no">
+              <div class="qno">{{questionSerial}}</div>
+              <div class="question-type"> Multiple Select</div>
+            </div>
+          </div>
+    
+          <div class="following-up">
+            {{multipleSelect.instruction}}
+          </div>
+          <div class="question">
+              {{multipleSelect.question}}
+          </div>
+          <mat-checkbox [(ngModel)]="multipleSelect.option1" (click)="onClick()">{{ option[0] }}</mat-checkbox> 
+          <mat-checkbox [(ngModel)]="multipleSelect.option2" (click)="onClick()">{{ option[1] }}</mat-checkbox> 
+          <mat-checkbox [(ngModel)]="multipleSelect.option3" (click)="onClick()">{{ option[2] }}</mat-checkbox> 
+          <mat-checkbox [(ngModel)]="multipleSelect.option4" (click)="onClick()">{{ option[3] }}</mat-checkbox> 
+      
+    </mat-card-content>
+  </mat-card>

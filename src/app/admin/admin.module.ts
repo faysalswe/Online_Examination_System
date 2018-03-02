@@ -2,23 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminComponent } from './admin.component';
+import { SharedImportsModule } from '../shared-imports.module';
+
 import { HomeComponent } from './home/home.component';
-
-
 const routes: Routes = [
-  { path: '', component: AdminComponent, children: [
-    { path: 'home', component: HomeComponent }
+  { path: '', component: HomeComponent, children: [
+    // { path: 'home', component: HomeComponent }
   ]}
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedImportsModule
   ],
   declarations: [
-    AdminComponent,
     HomeComponent
   ]
 })

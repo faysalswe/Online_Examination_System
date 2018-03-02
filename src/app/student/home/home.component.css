@@ -1,0 +1,12 @@
+.sidebar{
+    width: 50%;
+    margin-right: 15px;
+}
+
+.main-content{
+    width: 100%;
+}
+
+.container{
+    display: flex;
+}
