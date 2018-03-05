@@ -21,3 +21,9 @@ mat-card-content{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.heading{
+    font-size: 22px;
+    text-align: center;
+    border-bottom: 2px solid rgba(160, 149, 149, 0.212);
+    margin-bottom: 15px;
+}

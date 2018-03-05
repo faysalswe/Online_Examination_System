@@ -13,8 +13,8 @@
       <div class="question">
       {{ multipleChoice.question }}
       </div>
-        <mat-radio-group [(ngModel)]="answer">
-          <mat-radio-button *ngFor="let option of options" [value]="option" (click)="onClick()">
+        <mat-radio-group [(ngModel)]="answer" (click)="onClick()">
+          <mat-radio-button *ngFor="let option of options" [value]="option">
             {{option}}
           </mat-radio-button>
         </mat-radio-group>

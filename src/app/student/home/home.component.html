@@ -9,7 +9,8 @@
     </div>
     <div class="main-content">
 
-      <div *ngFor="let question of questions; index as i"  [ngSwitch]="question.questionTypeId">
+      <div *ngFor="let question of questions | paginate: { itemsPerPage: 3, currentPage: p }; index as i "
+      [ngSwitch]="question.questionTypeId">
           <app-fill-in-the-blanks 
           *ngSwitchCase="1"
            [fillInTheBlanks]="question"
@@ -33,11 +34,9 @@
           [multipleSelect]="question"
           [questionSerial]="i+1">
         </app-multiple-select>
-        
           <br>
       </div>
-    
-      <app-pagination></app-pagination>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
   </div>
 </router-outlet>
