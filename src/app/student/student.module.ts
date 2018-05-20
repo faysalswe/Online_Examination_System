@@ -11,7 +11,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 import { StudentService} from './student.service';
 const routes: Routes = [
-  { path: 'student', component: HomeComponent, children: [
+  { path: '', component: HomeComponent, children: [
      { path: 'exam', component:  ExamComponent },
      { path: 'profile', component: ExamHistoryComponent }
   ]}

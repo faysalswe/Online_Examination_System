@@ -6,7 +6,7 @@ import { SharedImportsModule } from '../shared-imports.module';
 
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
-  { path: '', component: HomeComponent, children: [
+  { path: 'admin', component: HomeComponent, children: [
     // { path: 'home', component: HomeComponent }
   ]}
 ];
